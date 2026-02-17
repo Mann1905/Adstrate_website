@@ -1,0 +1,180 @@
+/* Navbar / Header styles - uses global CSS variables */
+
+.navbar {
+  width: 100%;
+  background-color: var(--bg-primary);
+  padding: 1.25rem 2rem;
+  box-shadow: 0 1px 0 var(--border-color-light);
+}
+
+.navbar__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Logo / Brand */
+.navbar__brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.navbar__brand:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Navigation links (center) */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__nav a {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.navbar__nav a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Right section: buttons */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Pill-shaped buttons */
+.navbar__btn {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.navbar__btn--outline {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.navbar__btn--outline:hover {
+  color: var(--orange-600);
+  border-color: var(--orange-600);
+  background-color: var(--orange-100);
+}
+
+.navbar__btn--primary {
+  color: var(--text-light);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.navbar__btn--primary:hover {
+  background-color: var(--orange-600);
+  border-color: var(--orange-600);
+  color: var(--text-light);
+}
+
+/* Mobile: hamburger and collapse */
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.navbar__toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+
+  .navbar__inner {
+    flex-wrap: wrap;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__nav,
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__nav.is-open,
+  .navbar__actions.is-open {
+    display: flex;
+  }
+
+  .navbar__nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color-light);
+  }
+
+  .navbar__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar__brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar__btn {
+    font-size: 0.9375rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
