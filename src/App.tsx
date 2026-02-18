@@ -14,11 +14,7 @@ import './assets/styles/variables.css';
 const App: React.FC = () => {
   return (
     <Router>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        minHeight: '100vh' 
-      }}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
         <Navbar />
         <main style={{ flex: 1 }}>
           <Routes>

@@ -1,5 +1,5 @@
 .home-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -40,20 +40,20 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   gap: 2rem;
 }
 
 .feature-card {
   padding: 2rem;
-  border: 1px solid #e0e0e0;
+  border: 0.0625rem solid #e0e0e0;
   border-radius: var(--radius-lg);
   background-color: var(--bg-secondary);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.3125rem);
   box-shadow: var(--shadow-md);
 }
 
