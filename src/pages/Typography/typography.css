@@ -1,0 +1,84 @@
+/* Typography Style Guide Page */
+
+.typography-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  padding: 4rem 0;
+}
+
+.typography-page__container {
+  width: 100%;
+}
+
+.typography-page__title {
+  font-size: clamp(2rem, 3vw + 1rem, 3.5rem);
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.typography-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.typography-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 0;
+  border-bottom: 0.0625rem solid #E0E0E0;
+}
+
+.typography-item:last-child {
+  border-bottom: none;
+}
+
+.typography-item__label {
+  font-size: clamp(0.875rem, 0.5vw + 0.5rem, 1rem);
+  font-weight: 400;
+  color: #666666;
+  font-family: var(--font-primary);
+}
+
+.typography-item__example {
+  margin: 0;
+  padding: 0;
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.typography-item__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.typography-item__input:focus {
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 48rem) {
+  .typography-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .typography-item__label {
+    min-width: 12rem;
+    flex-shrink: 0;
+  }
+
+  .typography-item__example {
+    flex: 1;
+  }
+}

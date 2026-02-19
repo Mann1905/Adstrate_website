@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact';
 import Service from './pages/Service/Service';
 import Quotation from './pages/Quotation/Quotation';
 import Blog from './pages/Blog/Blog';
+import Typography from './pages/Typography/Typography';
 import ErrorPage from './pages/Error/ErrorPage';
 import './assets/styles/global.css';
 import './assets/styles/variables.css';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path="/service" element={<Service />} />
             <Route path="/quotation" element={<Quotation />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/typography" element={<Typography />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
