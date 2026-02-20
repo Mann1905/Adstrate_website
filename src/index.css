@@ -266,7 +266,7 @@ blockquote {
   font-size: clamp(1.5rem, 0.833vw + 1rem, 2rem);
   font-weight: 600;
   color: var(--text-primary);
-  border-left: 0.1875rem solid var(--color-primary);
+  
 
 }
 
