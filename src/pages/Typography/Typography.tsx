@@ -10,55 +10,53 @@ const Typography: React.FC = () => {
         <h1 className="typography-page__title">Typography Style Guide</h1>
         
         <div className="typography-page__list">
-          {/* Title/Heading 1 */}
           <div className="typography-item">
             <span className="typography-item__label">Title/Heading 1</span>
             <h1 className="typography-item__example">{exampleText}</h1>
           </div>
 
-          {/* Blog Title */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Blog Title</span>
             <div className="typography-item__example blog-title">{exampleText}</div>
           </div>
 
-          {/* Heading 2 */}
+        
           <div className="typography-item">
             <span className="typography-item__label">Heading 2</span>
             <h2 className="typography-item__example">{exampleText}</h2>
           </div>
 
-          {/* Heading 3 */}
-          <div className="typography-item">
+                    <div className="typography-item">
             <span className="typography-item__label">Heading 3</span>
             <h3 className="typography-item__example">{exampleText}</h3>
           </div>
 
-          {/* Paragraph */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Paragraph</span>
             <p className="typography-item__example">{exampleText}</p>
           </div>
 
-          {/* Quotes */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Quotes</span>
             <div className="typography-item__example quotes">{exampleText}</div>
           </div>
 
-          {/* Leading */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Leading</span>
             <div className="typography-item__example leading">{exampleText}</div>
           </div>
 
-          {/* Input Label */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Input Label</span>
             <label className="typography-item__example input-label">{exampleText}</label>
           </div>
 
-          {/* Input Placeholder */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Input Placeholder</span>
             <input 
@@ -69,31 +67,31 @@ const Typography: React.FC = () => {
             />
           </div>
 
-          {/* Button Text */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Button Text</span>
             <button className="typography-item__example button-text">{exampleText}</button>
           </div>
 
-          {/* Link Text */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Link Text</span>
             <a href="#" className="typography-item__example link-text">{exampleText}</a>
           </div>
 
-          {/* Link Label */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Link Label</span>
             <a href="#" className="typography-item__example link-label">{exampleText}</a>
           </div>
 
-          {/* Micro Link Text */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Micro Link Text</span>
             <a href="#" className="typography-item__example micro-link-text">{exampleText}</a>
           </div>
 
-          {/* Key Tags */}
+          
           <div className="typography-item">
             <span className="typography-item__label">Key Tags</span>
             <span className="typography-item__example key-tags">{exampleText}</span>
