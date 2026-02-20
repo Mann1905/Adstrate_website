@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import instagramIcon from '../../assets/images/element/Instagram.svg';
 import linkedinIcon from '../../assets/images/element/LinkedIn.svg';
+import heroImage from '../../assets/images/Quote/Hero-Section.jpg';
 import './quotes.css';
 
 const Quotation: React.FC = () => {
-  const heroImage = '/src/assets/images/Quote/Hero-Section.jpg';
 
   const [formData, setFormData] = useState({
     name: '',
