@@ -28,7 +28,7 @@
   aspect-ratio: 21 / 9;
   max-height: 26.25rem;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
 .contact-banner__img {
@@ -232,7 +232,7 @@
 .contact-form__textarea {
   min-height: 7.5rem;
   resize: vertical;
-  font-family: inherit;
+  
 }
 
 .contact-form__submit {
@@ -272,5 +272,144 @@
 @media (max-width: 40rem) {
   .contact-main {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Mobile-specific overrides (320px – 768px)
+   Does not alter desktop styles.
+   ============================================ */
+@media (max-width: 768px) {
+  /* Page container: reduce padding, prevent horizontal scroll */
+  .contact-page {
+    padding: 0 1.25rem;
+    overflow-x: hidden;
+  }
+
+  /* Banner: tighter vertical margin, smaller aspect ratio */
+  .contact-banner {
+    margin: 2rem 0 0 0;
+  }
+
+  .contact-banner__image {
+    aspect-ratio: 1 / 1;
+    max-height: 28rem;
+    border-radius: 12px;
+  }
+
+  
+  /* Main: single column, stack contact info then form */
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  /* Contact info: full width, reduced spacing, single-column details */
+  .contact-info {
+    max-width: 100%;
+    gap: 4rem;
+  }
+
+  .contact-info__intro {
+    gap: 1.5rem;
+  }
+
+  
+
+
+  .contact-info__title {
+    white-space: normal;
+  
+  }
+
+  .contact-info__text {
+    
+    line-height: 1.5;
+  }
+
+  .contact-info__details-block {
+    gap: 1.25rem;
+  }
+
+  /* Phone & Email stacked vertically on mobile */
+  .contact-info__details {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-info__detail-item {
+    gap: 0.75rem;
+  }
+
+  .contact-info__follow {
+    gap: 0.75rem;
+  }
+
+  /* Social icons: tap-friendly size, no overflow */
+  .contact-info__social {
+    gap: 0.5rem;
+  }
+
+  .contact-info__social-link {
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+
+  .contact-info__social-link img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* Form box: full width, top rounded only, reduced padding */
+  .contact-form-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem 1.5rem;
+    
+  }
+
+  .contact-form-box__inner {
+    gap: 3rem;
+  }
+
+  .contact-form-box__header {
+    gap: 2.5rem;
+  }
+
+
+  .contact-form-box__text {
+  
+    line-height: 1.5;
+  }
+
+
+
+  .contact-form__field {
+    gap: 0.75rem;
+  }
+
+
+  .contact-form__input,
+  .contact-form__textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    min-height: 2.75rem;
+  }
+
+  .contact-form__textarea {
+    min-height: 6rem;
+  }
+
+  /* Full-width tap-friendly submit button */
+  .contact-form__submit {
+    min-height: 2.75rem;
+    padding: 0.75rem 0rem;
+  
   }
 }
