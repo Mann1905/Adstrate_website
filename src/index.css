@@ -190,7 +190,7 @@ p {
   font-weight: 500;
   line-height: 1.6;
   margin: 0 0 1rem 0;
-  color: var(--text-primary);
+  color: var(--color-black);
 }
 
 
@@ -292,7 +292,7 @@ label {
   font-family: var(--font-primary);
   font-size: clamp(1rem, 0.417vw + 1rem, 1.5rem);
   font-weight: 500;
-  color: var(--text-primary);
+  color: #313030;
 
 }
 
@@ -309,8 +309,8 @@ textarea::placeholder {
 .link-text {
   font-family: var(--font-primary);
   font-size: clamp(1rem, 0.417vw + 1rem, 1.5rem);
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 500;
+  color: var(--color-black);
 }
 
 .link-text:hover {
@@ -321,8 +321,8 @@ textarea::placeholder {
 .link-label {
   font-family: var(--font-primary);
   font-size: clamp(1rem, 0.417vw + 1rem, 1.5rem);
-  font-weight: 500;
-  color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-black);
 }
 
 .link-label:hover {

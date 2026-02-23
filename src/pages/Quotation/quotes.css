@@ -6,26 +6,30 @@
 
 .quotes-page__card {
   width: 100%;
+  background: var(--color-white-background);
   margin: 0 auto;
-  padding: 1rem;
-  background: #f4f1ec;
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 8px 20px rgba(17, 17, 17, 0.1);
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 3rem;
   overflow: hidden;
 }
 
 .quotes-page__left {
-  flex: 1.15 1 0;
+  flex: 60 1 0;
   position: relative;
   min-width: 0;
+  min-height: 0;
   overflow: hidden;
-  border-radius: 0.9rem;
+  border-radius: 1rem;
+  align-self: stretch;
 }
 
 .quotes-page__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -34,37 +38,41 @@
 
 .quotes-page__overlay {
   position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  padding: 0.95rem 1rem;
-  background: rgba(16, 16, 16, 0.34);
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  padding: 3rem;
+  background: rgba(204, 202, 198, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   backdrop-filter: blur(8px);
+}
+.quotes-page__overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .quotes-page__caption {
-  margin: 0;
-  color: #ffffff;
-  font-size: 0.95rem;
+  margin: 0;  
+  color: var(--color-white-background);
   line-height: 1.5;
+
 }
 
 .quotes-page__arrows {
-  margin-top: 0.75rem;
+  
   display: flex;
   justify-content: flex-end;
-  gap: 0.625rem;
+  gap: 1rem;
 }
 
 .quotes-page__arrow-btn {
-  min-width: 4.75rem;
+  min-width: 4rem;
   height: 2.5rem;
   padding: 0 1rem;
-  border-radius: 999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
-  color: #ffffff;
+  border-radius: 6.25rem;
+  border: 1.5px solid rgba(243, 240, 235, 1);
   background: rgba(255, 255, 255, 0.12);
   display: inline-flex;
   align-items: center;
@@ -86,26 +94,32 @@
   border-color: #f3f0eb;
 }
 
-.quotes-page__arrow-btn:hover {
-  transform: translateY(-1px);
-}
 
-.quotes-page__arrow-btn--prev:hover {
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.quotes-page__arrow-btn--next:hover {
-  background: #ffffff;
-}
 
 .quotes-page__right {
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 0.5rem 0.3rem;
+  flex: 40 1 0;
+  gap:12.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow-wrap: anywhere;
+}
+
+.quotes-page__right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.0625rem;
+}
+
+.quotes-page__right-content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.quotes-page__right-content-form {
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
 }
 
 .quotes-page__title {
@@ -114,97 +128,130 @@
 }
 
 .quotes-page__description {
-  margin: 0.75rem 0 1.25rem;
-  font-size: 15.2px;
+ text-align: justify;
   line-height: 24px;
-  color: #2a2a2a;
+
 }
 
 .quotes-form {
-  display: grid;
-  gap: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.quotes-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+}
+
+.quotes-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .quotes-form__label {
   margin: 0;
-  font-size: 0.95rem;
 }
 
 .quotes-form__input,
 .quotes-form__textarea {
   width: 100%;
   border: 1px solid #ccc5bc;
-  border-radius: 0.5rem;
-  padding: 0.7rem 0.85rem;
-  background: #f6f3ee;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-white-background);
 }
 
 .quotes-form__input::placeholder,
 .quotes-form__textarea::placeholder {
-  color: #777;
+  color: #7f7d7b;
+}
+
+.quotes-form__input::-webkit-input-placeholder,
+.quotes-form__textarea::-webkit-input-placeholder {
+  color: #7f7d7b;
 }
 
 .quotes-form__textarea {
   resize: vertical;
 }
 
-.quotes-form__submit {
-  margin-top: 0.35rem;
+.quotes-form__actions {
   width: 100%;
-  border-radius: 999px;
-  padding: 0.65rem 1rem;
+  
+}
+
+.quotes-form__submit {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 6.25rem;
   background: #fe572a;
-  color: #fff;
+  color: var(--color-white-background);
   border: 0;
   transition: filter 150ms ease;
 }
 
-.quotes-form__submit:hover {
-  filter: brightness(0.95);
+
+.quotes-page__contact-section {
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.quotes-page__contact {
-  margin-top: 1rem;
+.quotes-page__contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.quotes-page__contact-label,
-.quotes-page__contact-value {
+.quotes-page__contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quotes-page__contact-label {
   margin: 0;
   line-height: 1.4;
 }
 
-.quotes-page__contact-label {
-  margin-bottom: 0.1rem;
+.quotes-page__contact-link {
+  margin: 0;
+  line-height: 1.4;
 }
 
-.quotes-page__contact--email {
-  margin-top: 0.75rem;
-}
-
-.quotes-page__email-row {
+.quotes-page__contact-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
+  align-self: flex-end;
 }
 
 .quotes-page__social {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 1.5rem;
 }
 
 .quotes-page__social a {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 4.5rem;
+  height: 4.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .quotes-page__social img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 64rem) {
@@ -238,7 +285,7 @@
     padding: 0.75rem;
   }
 
-  .quotes-page__email-row {
+  .quotes-page__contact-section {
     flex-direction: column;
     align-items: flex-start;
   }

@@ -36,96 +36,121 @@ const Quotation: React.FC = () => {
             className="quotes-page__image"
           />
           <div className="quotes-page__overlay">
-            <p className="quotes-page__caption">
-              As a top digital marketing company in Mumbai, we focus on
-              measurable outcomes, ensuring your business grows and stays
-              competitive.
-            </p>
-            <div className="quotes-page__arrows" aria-label="Image navigation">
-              <button
-                type="button"
-                className="quotes-page__arrow-btn quotes-page__arrow-btn--prev"
-                aria-label="Previous"
-              >
-                {'\u2190'}
-              </button>
-              <button
-                type="button"
-                className="quotes-page__arrow-btn quotes-page__arrow-btn--next"
-                aria-label="Next"
-              >
-                {'\u2192'}
-              </button>
+            <div className="quotes-page__overlay-content">
+              <p className="quotes-page__caption">
+                As a top digital marketing company in Mumbai, we focus on
+                measurable outcomes, ensuring your business grows and stays
+                competitive.
+              </p>
+              <div className="quotes-page__arrows" aria-label="Image navigation">
+                <button
+                  type="button"
+                  className="quotes-page__arrow-btn quotes-page__arrow-btn--prev"
+                  aria-label="Previous"
+                >
+                  {'\u2190'}
+                </button>
+                <button
+                  type="button"
+                  className="quotes-page__arrow-btn quotes-page__arrow-btn--next"
+                  aria-label="Next"
+                >
+                  {'\u2192'}
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="quotes-page__right">
-          <h2 className="quotes-page__title">Get Quote</h2>
-          <p className="quotes-page__description">
-            Get a custom proposal from Adstrate, a leading digital marketing
-            agency in Mumbai. We specialize in social media and Instagram
-            marketing, plus content creation, to boost your digital presence and
-            drive measurable growth.
-          </p>
+          <div className="quotes-page__right-content">
+            <div className="quotes-page__right-content-item">
+              <h2 className="quotes-page__title">Get Quote</h2>
+              <p className="quotes-page__description">
+                Get a custom proposal from Adstrate, a leading digital marketing
+                agency in Mumbai. We specialize in social media and Instagram
+                marketing, plus content creation, to boost your digital presence and
+                drive measurable growth.
+              </p>
+            </div>
 
-          <form className="quotes-form" onSubmit={handleSubmit} noValidate>
-            <label htmlFor="quote-name" className="quotes-form__label">
-              Name
-            </label>
-            <input
-              id="quote-name"
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="quotes-form__input"
-              placeholder="Name"
-              required
-            />
+            <div className="quotes-page__right-content-form">
+              <form className="quotes-form" onSubmit={handleSubmit} noValidate>
+                <div className="quotes-form__fields">
+                  <div className="quotes-form__field">
+                    <label htmlFor="quote-name" className="quotes-form__label">
+                      Name
+                    </label>
+                    <input
+                      id="quote-name"
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="quotes-form__input"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
 
-            <label htmlFor="quote-phone" className="quotes-form__label">
-              Phone No
-            </label>
-            <input
-              id="quote-phone"
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="quotes-form__input"
-              placeholder="Phone No"
-              required
-            />
+                  <div className="quotes-form__field">
+                    <label htmlFor="quote-phone" className="quotes-form__label">
+                      Phone No
+                    </label>
+                    <input
+                      id="quote-phone"
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="quotes-form__input"
+                      placeholder="Phone No"
+                      required
+                    />
+                  </div>
 
-            <label htmlFor="quote-message" className="quotes-form__label">
-              Message
-            </label>
-            <textarea
-              id="quote-message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="quotes-form__textarea"
-              placeholder="Message"
-              rows={5}
-              required
-            />
+                  <div className="quotes-form__field">
+                    <label htmlFor="quote-message" className="quotes-form__label">
+                      Message
+                    </label>
+                    <textarea
+                      id="quote-message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="quotes-form__textarea"
+                      placeholder="Message"
+                      rows={5}
+                      required
+                    />
+                  </div>
+                </div>
 
-            <button type="submit" className="quotes-form__submit">
-              Contact Us
-            </button>
-          </form>
-
-          <div className="quotes-page__contact">
-            <p className="quotes-page__contact-label">Phone No:</p>
-            <p className="quotes-page__contact-value">+91 8976 050 818</p>
+                <div className="quotes-form__actions">
+                  <button type="submit" className="quotes-form__submit">
+                    Contact Us
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
 
-          <div className="quotes-page__contact quotes-page__contact--email">
-            <p className="quotes-page__contact-label">Email:</p>
-            <div className="quotes-page__email-row">
-              <p className="quotes-page__contact-value">contact@adstrate.in</p>
+          <div className="quotes-page__contact-section">
+            <div className="quotes-page__contact-left">
+              <div className="quotes-page__contact-item">
+                <div className="quotes-page__contact-label link-label">Phone No:</div>
+                <a href="tel:+918976050818" className="quotes-page__contact-link link-text">
+                  +91 8976 050 818
+                </a>
+              </div>
+              <div className="quotes-page__contact-item">
+                <div className="quotes-page__contact-label link-label">Email:</div>
+                <a href="mailto:contact@adstrate.in" className="quotes-page__contact-link link-text">
+                  contact@adstrate.in
+                </a>
+              </div>
+            </div>
+            <div className="quotes-page__contact-right">
               <div className="quotes-page__social">
                 <a
                   href="https://www.instagram.com/adstrate"
