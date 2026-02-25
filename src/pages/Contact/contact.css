@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-white-background);
-  padding: 0rem 2rem;
+  padding: 3rem 3rem;
   margin: 0;
   display: flex;
   flex-direction: column;
